@@ -17,7 +17,7 @@
     {
       "id": 3,
       "nome": "Excluir usuários",
-      "descricao": "Como administrador, quero poder excluir usuários do sistema.",
+      "descricao": "Como administrador, quero excluir usuários do sistema.",
       "pontos": "10",
       "tarefas": []
     }
