@@ -1,25 +1,25 @@
 {
-    "estorias": [
-        {
-            "id": 1,
-            "nome": "Story1",
-            "descricao": "As a user of story 1...",
-            "pontos": 1,
-            "tarefas": []
-        },
-        {
-            "id": 2,
-            "nome": "Story2",
-            "descricao": "As a user of story 2...",
-            "pontos": 2,
-            "tarefas": []
-        },
-        {
-            "id": 3,
-            "nome": "Story3",
-            "descricao": "As a user of story 3...",
-            "pontos": 3,
-            "tarefas": []
-        }
-    ]
+  "estorias": [
+    {
+      "id": 1,
+      "nome": "Cadastrar usuários",
+      "descricao": "Como administrador, quero cadastrar usuários no sistema.",
+      "pontos": "20",
+      "tarefas": []
+    },
+    {
+      "id": 2,
+      "nome": "Alterar usuários",
+      "descricao": "Como administrador, quero alterar informações de usuários do sistema.",
+      "pontos": "15",
+      "tarefas": []
+    },
+    {
+      "id": 3,
+      "nome": "Excluir usuários",
+      "descricao": "Como administrador, quero poder excluir usuários do sistema.",
+      "pontos": "10",
+      "tarefas": []
+    }
+  ]
 }

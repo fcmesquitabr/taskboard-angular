@@ -25,6 +25,11 @@ var EstoriaDetalheComponent = (function () {
             .switchMap(function (params) { return _this.estoriaService.getEstoria(+params['id']); })
             .subscribe(function (estoria) { return _this.estoria = estoria; });
     };
+    EstoriaDetalheComponent.prototype.save = function () {
+        var _this = this;
+        this.estoriaService.alterar(this.estoria)
+            .subscribe(function (estoria) { return _this.goBack(); });
+    };
     EstoriaDetalheComponent.prototype.goBack = function () {
         this.location.back();
     };

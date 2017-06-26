@@ -24,6 +24,11 @@ export class EstoriaDetalheComponent implements OnInit {
             .subscribe(estoria => this.estoria = estoria);
     }
 
+    save(): void {
+        this.estoriaService.alterar(this.estoria)
+            .subscribe(estoria => this.goBack());
+    }
+
     goBack(): void {
         this.location.back();
     }

@@ -13,11 +13,18 @@ var http_1 = require('@angular/http');
 var Observable_1 = require('rxjs/Observable');
 require('rxjs/add/operator/catch');
 require('rxjs/add/operator/map');
+require('rxjs/add/operator/toPromise');
 var EstoriaService = (function () {
     function EstoriaService(http) {
         this.http = http;
         this.apiEstorias = 'http://localhost:3002/estorias';
+        this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
+    EstoriaService.prototype.alterar = function (estoria) {
+        var url = this.apiEstorias + "/" + estoria.id;
+        return this.http
+            .put(url, JSON.stringify(estoria), { headers: this.headers }).map(function (estoria) { return estoria; }).catch(this.handleError);
+    };
     EstoriaService.prototype.getEstoria = function (id) {
         return this.getEstorias().map(function (estorias) { return estorias.find(function (estoria) { return estoria.id === id; }); });
     };
