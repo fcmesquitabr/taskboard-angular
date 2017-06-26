@@ -9,16 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var estoria_service_1 = require('./estoria.service');
 var ListaEstoriaComponent = (function () {
-    function ListaEstoriaComponent() {
+    function ListaEstoriaComponent(estoriaService) {
+        this.estoriaService = estoriaService;
+        this.errorMessage = "";
     }
+    ListaEstoriaComponent.prototype.ngOnInit = function () {
+        this.getEstorias();
+    };
+    ListaEstoriaComponent.prototype.getEstorias = function () {
+        var _this = this;
+        this.estoriaService.getEstorias()
+            .subscribe(function (estorias) { return _this.estorias = estorias; }, function (error) { return _this.errorMessage = error; });
+    };
+    ListaEstoriaComponent.prototype.totalDeEstorias = function () {
+        return (this.estorias ? this.estorias.length : '');
+    };
     ListaEstoriaComponent = __decorate([
         core_1.Component({
             selector: 'lista-estoria',
-            templateUrl: 'app/lista-estoria.component.html',
-            styleUrls: []
+            templateUrl: 'app/lista-estoria.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [estoria_service_1.EstoriaService])
     ], ListaEstoriaComponent);
     return ListaEstoriaComponent;
 }());

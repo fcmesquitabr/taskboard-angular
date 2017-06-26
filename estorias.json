@@ -1,0 +1,25 @@
+{
+    "estorias": [
+        {
+            "id": 1,
+            "nome": "Story1",
+            "descricao": "As a user of story 1...",
+            "pontos": 1,
+            "tarefas": []
+        },
+        {
+            "id": 2,
+            "nome": "Story2",
+            "descricao": "As a user of story 2...",
+            "pontos": 2,
+            "tarefas": []
+        },
+        {
+            "id": 3,
+            "nome": "Story3",
+            "descricao": "As a user of story 3...",
+            "pontos": 3,
+            "tarefas": []
+        }
+    ]
+}

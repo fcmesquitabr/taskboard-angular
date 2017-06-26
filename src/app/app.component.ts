@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'meu-app',
-    template: `
+  selector: 'meu-app',
+  template: `
       <div>
         <nav class="indigo darken-4" role="navigation">
             <div class="nav-wrapper container">
@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
         </nav>
 
         <div class="container">
-          <lista-estoria></lista-estoria>
+          <router-outlet></router-outlet>
         </div>
 
         <footer class="page-footer orange">

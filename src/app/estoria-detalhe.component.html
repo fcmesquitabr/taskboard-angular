@@ -1,0 +1,13 @@
+<div *ngIf="estoria">
+    <h2>Estória: {{estoria.nome}}</h2>
+    <div>
+        <div><label>id: </label>{{estoria.id}}</div>
+        <label>Nome: </label>
+        <input [(ngModel)]="estoria.nome" placeholder="nome" />
+        <label>Descrição: </label>
+        <input [(ngModel)]="estoria.descricao" placeholder="descrição" />
+        <label>Pontos: </label>
+        <input [(ngModel)]="estoria.pontos" placeholder="pontos" />
+    </div>
+    <button (click)="goBack()">Back</button>
+</div>
