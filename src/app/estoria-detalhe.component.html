@@ -1,6 +1,6 @@
 <div *ngIf="estoria">
-    <h2>Estória: {{estoria.nome}}</h2>
     <div>
+        <h4>Estória: {{estoria.nome}}</h4>
         <div><label>id: </label>{{estoria.id}}</div>
         <label>Nome: </label>
         <input [(ngModel)]="estoria.nome" placeholder="nome" />
@@ -9,6 +9,16 @@
         <label>Pontos: </label>
         <input [(ngModel)]="estoria.pontos" placeholder="pontos" />
     </div>
+    <div>
+        <h4>Tarefas</h4>
+        <tarefa *ngFor="let tarefa of estoria.tarefas" [tarefa]="tarefa" [estoria]="estoria"></tarefa>
+        <br />
+        <div>
+            <input [(ngModel)]="tarefa.descricao" (ngModelChange)="checkEmptyTask()" placeholder="tarefa" />
+            <button (click)="addTask()" [disabled]="isEmptyTask">Adicionar Tarefa</button>
+        </div>
+    </div>
+    <br />
     <button (click)="goBack()">Voltar</button>
     <button (click)="save()">Salvar</button>
 </div>

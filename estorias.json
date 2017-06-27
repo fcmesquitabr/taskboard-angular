@@ -5,7 +5,20 @@
       "nome": "Cadastrar usuários",
       "descricao": "Como administrador, quero cadastrar usuários no sistema.",
       "pontos": "20",
-      "tarefas": []
+      "tarefas": [
+        {
+          "id": 1,
+          "descricao": "Desenvolver o back-end."
+        },
+        {
+          "id": 2,
+          "descricao": "Desenvolver o front-end."
+        },
+        {
+          "descricao": "Desenvolver os testes funcionais.",
+          "id": 3
+        }
+      ]
     },
     {
       "id": 2,

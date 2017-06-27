@@ -17,6 +17,7 @@ var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var app_component_1 = require('./app/app.component');
 var lista_estoria_component_1 = require('./app/lista-estoria.component');
 var estoria_component_1 = require('./app/estoria.component');
+var tarefa_component_1 = require('./app/tarefa.component');
 var estoria_detalhe_component_1 = require('./app/estoria-detalhe.component');
 var estoria_service_1 = require('./app/estoria.service');
 var appRoutes = [
@@ -30,7 +31,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, router_1.RouterModule.forRoot(appRoutes)],
-            declarations: [app_component_1.AppComponent, lista_estoria_component_1.ListaEstoriaComponent, estoria_component_1.EstoriaComponent, estoria_detalhe_component_1.EstoriaDetalheComponent],
+            declarations: [app_component_1.AppComponent, lista_estoria_component_1.ListaEstoriaComponent, estoria_component_1.EstoriaComponent, tarefa_component_1.TarefaComponent, estoria_detalhe_component_1.EstoriaDetalheComponent],
             providers: [estoria_service_1.EstoriaService],
             bootstrap: [app_component_1.AppComponent]
         }), 

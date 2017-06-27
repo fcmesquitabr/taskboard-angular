@@ -7,6 +7,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app/app.component';
 import { ListaEstoriaComponent } from './app/lista-estoria.component';
 import { EstoriaComponent } from './app/estoria.component';
+import { TarefaComponent } from './app/tarefa.component';
 import { EstoriaDetalheComponent } from './app/estoria-detalhe.component';
 import { EstoriaService } from './app/estoria.service';
 
@@ -18,7 +19,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [BrowserModule, HttpModule, FormsModule, RouterModule.forRoot(appRoutes)],
-    declarations: [AppComponent, ListaEstoriaComponent, EstoriaComponent, EstoriaDetalheComponent],
+    declarations: [AppComponent, ListaEstoriaComponent, EstoriaComponent, TarefaComponent, EstoriaDetalheComponent],
     providers: [EstoriaService],
     bootstrap: [AppComponent]
 })
