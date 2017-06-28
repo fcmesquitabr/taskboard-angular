@@ -5,6 +5,7 @@
       "nome": "Cadastrar usuários",
       "descricao": "Como administrador, quero cadastrar usuários no sistema.",
       "pontos": "20",
+      "finalizada": true,
       "tarefas": [
         {
           "id": 1,
@@ -29,6 +30,7 @@
       "nome": "Alterar usuários",
       "descricao": "Como administrador, quero alterar informações de usuários do sistema.",
       "pontos": "15",
+      "finalizada": false,
       "tarefas": []
     },
     {
@@ -36,6 +38,7 @@
       "nome": "Excluir usuários",
       "descricao": "Como administrador, quero excluir usuários do sistema.",
       "pontos": "10",
+      "finalizada": false,
       "tarefas": []
     }
   ]

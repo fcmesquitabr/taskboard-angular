@@ -6,6 +6,10 @@
                 <p>{{estoria.descricao}}<span class="badge white">{{estoria.pontos}}</span></p>
             </div>
             <div class="card-action">
+                <a class="right" (click)="toggleFinihed()">
+                    <span *ngIf="!estoria.finalizada">Finalizar</span>
+                    <span *ngIf="estoria.finalizada">Reativar</span>
+                </a>
                 <a class="right" [routerLink]="['/detalhar', estoria.id]">Exibir Estória</a>
                 <br/>
             </div>

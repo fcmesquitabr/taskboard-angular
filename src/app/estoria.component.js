@@ -10,9 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var estoria_1 = require('./estoria');
+var estoria_service_1 = require('./estoria.service');
 var EstoriaComponent = (function () {
-    function EstoriaComponent() {
+    function EstoriaComponent(estoriaService) {
+        this.estoriaService = estoriaService;
     }
+    EstoriaComponent.prototype.toggleFinihed = function () {
+        var _this = this;
+        this.estoria.finalizada = !this.estoria.finalizada;
+        this.estoriaService.alterar(this.estoria).subscribe(function (estoria) { return alert("Estória \"" + _this.estoria.nome + "\" " + (_this.estoria.finalizada ? "finalizada" : "reativada") + " com sucesso."); });
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', estoria_1.Estoria)
@@ -22,7 +29,7 @@ var EstoriaComponent = (function () {
             selector: 'estoria',
             templateUrl: 'app/estoria.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [estoria_service_1.EstoriaService])
     ], EstoriaComponent);
     return EstoriaComponent;
 }());

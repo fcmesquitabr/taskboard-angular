@@ -1,4 +1,4 @@
 <div class="card-panel grey lighten-5">
-    <button (click)="removeTask()" class="waves-effect waves-light btn-floating red lighten-3" style="float: right;"><i class="material-icons">delete</i></button>
+    <button (click)="removeTask()" class="waves-effect waves-light btn-floating red lighten-3 right" [disabled]="estoria.finalizada"><i class="material-icons">delete</i></button>
     <span>{{tarefa.id}} - {{tarefa.descricao}}</span>
 </div>
