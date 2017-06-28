@@ -1,24 +1,47 @@
 <div *ngIf="estoria">
-    <div>
-        <h4 class="header center orange-text">Estória: {{estoria.nome}}</h4>
-        <div><label>ID: </label>{{estoria.id}}</div>
-        <label>Nome: </label>
-        <input [(ngModel)]="estoria.nome" placeholder="nome" />
-        <label>Descrição: </label>
-        <input [(ngModel)]="estoria.descricao" placeholder="descrição" />
-        <label>Pontos: </label>
-        <input [(ngModel)]="estoria.pontos" placeholder="pontos" />
-    </div>
-    <div>
-        <label>Tarefas: </label>
-        <tarefa *ngFor="let tarefa of estoria.tarefas" [tarefa]="tarefa" [estoria]="estoria"></tarefa>
-        <br />
-        <div>
-            <input [(ngModel)]="tarefa.descricao" (ngModelChange)="checkEmptyTask()" placeholder="tarefa" />
-            <button (click)="addTask()" [disabled]="isEmptyTask">Adicionar Tarefa</button>
+    <h4 class="header center orange-text">Estória: {{estoria.nome}}</h4>
+
+    <div class="row">
+        <div class="input-field">
+            <input id="id" type="text" [(ngModel)]="estoria.id" disabled />
+            <label for="id" class="active">ID: </label>
         </div>
     </div>
-    <br />
-    <button (click)="goBack()">Voltar</button>
-    <button (click)="save()">Salvar</button>
+    <div class="row">
+        <div class="input-field">
+            <input id="nome" type="text" [(ngModel)]="estoria.nome" placeholder="nome" />
+            <label for="nome" class="active">Nome: </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field">
+            <input id="descricao" type="text" [(ngModel)]="estoria.descricao" placeholder="descrição" />
+            <label for="descricao" class="active">Descrição: </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field">
+            <input id="pontos" type="text" [(ngModel)]="estoria.pontos" placeholder="pontos" />
+            <label for="pontos" class="active">Pontos: </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s3">
+            <div class="input-field">
+                <input id="tarefa" type="text" [(ngModel)]="tarefa.descricao" (ngModelChange)="checkEmptyTask()" placeholder="Informe uma tarefa"
+                />
+                <label for="tarefa" class="active">Tarefas: </label>
+            </div>
+        </div>
+        <div class="col s1">
+            <button (click)="addTask()" [disabled]="isEmptyTask" class="waves-effect waves-light btn-floating"><i class="material-icons">add</i></button>
+        </div>
+        <div class="col s8">
+            <tarefa *ngFor="let tarefa of estoria.tarefas" [tarefa]="tarefa" [estoria]="estoria"></tarefa>
+        </div>
+    </div>
+    <div class="row center-align">
+        <button (click)="goBack()">Voltar</button>
+        <button (click)="save()">Salvar</button>
+    </div>
 </div>
