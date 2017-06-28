@@ -17,6 +17,10 @@
         {
           "descricao": "Desenvolver os testes funcionais.",
           "id": 3
+        },
+        {
+          "descricao": "Executar os testes funcionais.",
+          "id": 4
         }
       ]
     },
